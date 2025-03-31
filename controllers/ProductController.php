@@ -22,4 +22,9 @@ class ProductController {
     public function getDonViTheoThuoc($thuoc_id) {
         return $this->model->getDonViByThuoc($thuoc_id);
     }
+
+    // Lọc thuốc theo tên, loại, hạn sử dụng
+    public function filter($search = '', $loai = '', $hsd = '') {
+        return $this->model->filterProducts($search, $loai, $hsd);
+    }
 }
